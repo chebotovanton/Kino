@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F28D7171FEC002900714C8F /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F28D7161FEC002900714C8F /* NotificationsManager.swift */; };
+		9F28D7191FEC01B000714C8F /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F28D7181FEC01B000714C8F /* QuizManager.swift */; };
 		9F9DC4601FE98B560049F28B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DC45F1FE98B560049F28B /* AppDelegate.swift */; };
 		9F9DC4621FE98B560049F28B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DC4611FE98B560049F28B /* FirstViewController.swift */; };
 		9F9DC4641FE98B560049F28B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DC4631FE98B560049F28B /* SecondViewController.swift */; };
@@ -14,6 +16,9 @@
 		9F9DC4691FE98B560049F28B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9DC4681FE98B560049F28B /* Assets.xcassets */; };
 		9F9DC46C1FE98B560049F28B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9DC46A1FE98B560049F28B /* LaunchScreen.storyboard */; };
 		9F9DC4771FE98B560049F28B /* KinoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DC4761FE98B560049F28B /* KinoTests.swift */; };
+		9F9DC4821FE98B950049F28B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DC4811FE98B950049F28B /* LocationManager.swift */; };
+		9F9DC4861FE9BC770049F28B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DC4851FE9BC770049F28B /* Point.swift */; };
+		9F9DC4881FE9BE3C0049F28B /* PointsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DC4871FE9BE3C0049F28B /* PointsFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F28D7161FEC002900714C8F /* NotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		9F28D7181FEC01B000714C8F /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 		9F9DC45C1FE98B560049F28B /* Kino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9DC45F1FE98B560049F28B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9DC4611FE98B560049F28B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +45,9 @@
 		9F9DC4721FE98B560049F28B /* KinoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9DC4761FE98B560049F28B /* KinoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinoTests.swift; sourceTree = "<group>"; };
 		9F9DC4781FE98B560049F28B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F9DC4811FE98B950049F28B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		9F9DC4851FE9BC770049F28B /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		9F9DC4871FE9BE3C0049F28B /* PointsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,11 @@
 				9F9DC4681FE98B560049F28B /* Assets.xcassets */,
 				9F9DC46A1FE98B560049F28B /* LaunchScreen.storyboard */,
 				9F9DC46D1FE98B560049F28B /* Info.plist */,
+				9F9DC4811FE98B950049F28B /* LocationManager.swift */,
+				9F9DC4851FE9BC770049F28B /* Point.swift */,
+				9F9DC4871FE9BE3C0049F28B /* PointsFactory.swift */,
+				9F28D7161FEC002900714C8F /* NotificationsManager.swift */,
+				9F28D7181FEC01B000714C8F /* QuizManager.swift */,
 			);
 			path = Kino;
 			sourceTree = "<group>";
@@ -150,6 +165,11 @@
 					9F9DC45B1FE98B560049F28B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					9F9DC4711FE98B560049F28B = {
 						CreatedOnToolsVersion = 9.2;
@@ -202,6 +222,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F28D7191FEC01B000714C8F /* QuizManager.swift in Sources */,
+				9F9DC4821FE98B950049F28B /* LocationManager.swift in Sources */,
+				9F28D7171FEC002900714C8F /* NotificationsManager.swift in Sources */,
+				9F9DC4881FE9BE3C0049F28B /* PointsFactory.swift in Sources */,
+				9F9DC4861FE9BC770049F28B /* Point.swift in Sources */,
 				9F9DC4641FE98B560049F28B /* SecondViewController.swift in Sources */,
 				9F9DC4601FE98B560049F28B /* AppDelegate.swift in Sources */,
 				9F9DC4621FE98B560049F28B /* FirstViewController.swift in Sources */,

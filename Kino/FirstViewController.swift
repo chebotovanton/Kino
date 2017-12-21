@@ -1,25 +1,20 @@
-//
-//  FirstViewController.swift
-//  Kino
-//
-//  Created by Anton Chebotov on 19/12/2017.
-//  Copyright © 2017 Anton Chebotov. All rights reserved.
-//
-
 import UIKit
 
 class FirstViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        LocationManager.shared.sourceVC = self
+        LocationManager.shared.start()
+
+        NotificationsManager.shared.authorize()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    override func viewDidAppear(_ animated: Bool) {
 
+    }
 
 }
 
