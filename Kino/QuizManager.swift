@@ -6,9 +6,12 @@ class QuizManager: NSObject {
     public func showQuestion(_ point: Point) {
         let alert = UIAlertController(title: point.name, message: point.question, preferredStyle: .alert)
 
-        for answerOption in point.answerOptions {
-            let action = UIAlertAction(title: answerOption, style: .default, handler: { (action) in
-
+        for i in 0..<point.answerOptions.count {
+            let option = point.answerOptions[i]
+            let action = UIAlertAction(title: option, style: .default, handler: { (action) in
+                if point.answerIndex == i {
+                    PointsFactory.setPointDone(point)
+                }
             })
             alert.addAction(action)
         }

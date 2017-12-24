@@ -12,7 +12,7 @@ class PointCell: UITableViewCell {
 
     func setup(_ point: Point) {
         nameLabel.text = point.name
-        statusView.backgroundColor = point.done() ? UIColor.green : UIColor.red
+        statusView.backgroundColor = PointsFactory.isPointDone(point: point) ? UIColor.green : UIColor.red
     }
 
 }

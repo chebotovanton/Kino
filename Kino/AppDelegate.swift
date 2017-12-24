@@ -19,12 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        let time = DispatchTime.now() + 1.0
-        DispatchQueue.main.asyncAfter(deadline: time, execute: {
-            if let point = PointsFactory.allPoints().first {
-                NotificationsManager.shared.presentNotification(point)
-            }
-        })
+//        let time = DispatchTime.now() + 1.0
+//        DispatchQueue.main.asyncAfter(deadline: time, execute: {
+//            if let point = PointsFactory.allPoints().first {
+//                NotificationsManager.shared.presentNotification(point)
+//            }
+//        })
     }
 
     // MARK: - UNUserNotificationCenterDelegate

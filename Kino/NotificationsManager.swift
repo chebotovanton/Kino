@@ -40,7 +40,7 @@ class NotificationsManager: NSObject {
 
     public func presentNotification(_ point: Point) {
         let body = "You've reached " + point.name
-        setNotificationAfter(interval: 1.0, title: "Success", body: body, identifier: point.name)
+        setNotificationAfter(interval: 1.0, title: "Success", body: body, identifier: point.identifier)
     }
 
 

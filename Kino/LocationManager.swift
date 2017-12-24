@@ -32,7 +32,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
 
     private func startRegionsMonitoring() {
         for point in PointsFactory.allPoints() {
-            let region = CLCircularRegion(center: point.coordinate, radius: point.radius, identifier: point.name)
+            let region = CLCircularRegion(center: point.coordinate, radius: point.radius, identifier: point.identifier)
             locationManager.startMonitoring(for: region)
         }
     }
