@@ -37,16 +37,11 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         }
     }
 
-    private func presentNotification(_ point: Point) {
-        let body = "You've reached " + point.name
-        NotificationsManager.shared.setNotificationAfter(interval: 1.0, title: "Success", body: body, identifier: point.name)
-    }
-
     // MARK: - CLLocationManagerDelegate Methods
 
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         if let point = PointsFactory.point(with: region.identifier) {
-            presentNotification(point)
+            NotificationsManager.shared.presentNotification(point)
         }
     }
 

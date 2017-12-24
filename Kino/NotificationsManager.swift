@@ -38,6 +38,12 @@ class NotificationsManager: NSObject {
         }
     }
 
+    public func presentNotification(_ point: Point) {
+        let body = "You've reached " + point.name
+        setNotificationAfter(interval: 1.0, title: "Success", body: body, identifier: point.name)
+    }
+
+
     private func attachmentSound() -> UNNotificationAttachment? {
         if let url = Bundle.main.url(forResource: "kirov_reporting", withExtension: "mp3") {
             let att = try! UNNotificationAttachment(identifier: "sound", url: url, options: nil)
