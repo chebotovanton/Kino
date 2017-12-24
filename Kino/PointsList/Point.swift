@@ -22,4 +22,8 @@ class Point: NSObject {
         self.answerOptions = answerOptions
         self.answerIndex = answerIndex
     }
+
+    func done() -> Bool {
+        return true
+    }
 }

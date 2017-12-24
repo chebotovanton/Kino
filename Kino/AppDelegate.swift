@@ -11,6 +11,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
         UNUserNotificationCenter.current().delegate = self
 
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window!.makeKeyAndVisible()
+        window!.rootViewController = TabBarVC(nibName: "TabBarVC", bundle: nil)
+
         return true
     }
 
