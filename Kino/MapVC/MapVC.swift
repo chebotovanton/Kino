@@ -24,6 +24,8 @@ class MapVC: UIViewController, MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annView = mapView.dequeueReusableAnnotationView(withIdentifier: kAnnotationIdentifier, for: annotation)
+        annView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        annView.backgroundColor = UIColor.red
 
         return annView
     }
