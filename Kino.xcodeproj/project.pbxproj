@@ -14,10 +14,11 @@
 		9F28D7291FEFDF0200714C8F /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F28D7271FEFDF0200714C8F /* TabBarVC.swift */; };
 		9F28D72A1FEFDF0200714C8F /* TabBarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F28D7281FEFDF0200714C8F /* TabBarVC.xib */; };
 		9F28D72C1FEFE02100714C8F /* PointsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F28D72B1FEFE02100714C8F /* PointsVC.xib */; };
-		9F28D72F1FEFE07D00714C8F /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F28D72E1FEFE07D00714C8F /* SecondViewController.xib */; };
+		9F28D72F1FEFE07D00714C8F /* MapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F28D72E1FEFE07D00714C8F /* MapVC.xib */; };
+		9F29B95120270A5400A2DCFB /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F29B95020270A5400A2DCFB /* Annotation.swift */; };
 		9F9DC4601FE98B560049F28B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DC45F1FE98B560049F28B /* AppDelegate.swift */; };
 		9F9DC4621FE98B560049F28B /* PointsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DC4611FE98B560049F28B /* PointsVC.swift */; };
-		9F9DC4641FE98B560049F28B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DC4631FE98B560049F28B /* SecondViewController.swift */; };
+		9F9DC4641FE98B560049F28B /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DC4631FE98B560049F28B /* MapVC.swift */; };
 		9F9DC4691FE98B560049F28B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9DC4681FE98B560049F28B /* Assets.xcassets */; };
 		9F9DC46C1FE98B560049F28B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9DC46A1FE98B560049F28B /* LaunchScreen.storyboard */; };
 		9F9DC4771FE98B560049F28B /* KinoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DC4761FE98B560049F28B /* KinoTests.swift */; };
@@ -44,11 +45,12 @@
 		9F28D7271FEFDF0200714C8F /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		9F28D7281FEFDF0200714C8F /* TabBarVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarVC.xib; sourceTree = "<group>"; };
 		9F28D72B1FEFE02100714C8F /* PointsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsVC.xib; sourceTree = "<group>"; };
-		9F28D72E1FEFE07D00714C8F /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		9F28D72E1FEFE07D00714C8F /* MapVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapVC.xib; sourceTree = "<group>"; };
+		9F29B95020270A5400A2DCFB /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		9F9DC45C1FE98B560049F28B /* Kino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9DC45F1FE98B560049F28B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9DC4611FE98B560049F28B /* PointsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsVC.swift; sourceTree = "<group>"; };
-		9F9DC4631FE98B560049F28B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		9F9DC4631FE98B560049F28B /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		9F9DC4681FE98B560049F28B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F9DC46B1FE98B560049F28B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F9DC46D1FE98B560049F28B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,13 +102,14 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		9F28D72D1FEFE06B00714C8F /* SecondVC */ = {
+		9F28D72D1FEFE06B00714C8F /* MapVC */ = {
 			isa = PBXGroup;
 			children = (
-				9F9DC4631FE98B560049F28B /* SecondViewController.swift */,
-				9F28D72E1FEFE07D00714C8F /* SecondViewController.xib */,
+				9F9DC4631FE98B560049F28B /* MapVC.swift */,
+				9F28D72E1FEFE07D00714C8F /* MapVC.xib */,
+				9F29B95020270A5400A2DCFB /* Annotation.swift */,
 			);
-			path = SecondVC;
+			path = MapVC;
 			sourceTree = "<group>";
 		};
 		9F9DC4531FE98B560049F28B = {
@@ -130,7 +133,7 @@
 		9F9DC45E1FE98B560049F28B /* Kino */ = {
 			isa = PBXGroup;
 			children = (
-				9F28D72D1FEFE06B00714C8F /* SecondVC */,
+				9F28D72D1FEFE06B00714C8F /* MapVC */,
 				9F28D7261FEFDE7B00714C8F /* TabBar */,
 				9F28D7211FEFD80900714C8F /* PointsList */,
 				9F9DC45F1FE98B560049F28B /* AppDelegate.swift */,
@@ -242,7 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F28D7251FEFD91200714C8F /* PointCell.xib in Resources */,
-				9F28D72F1FEFE07D00714C8F /* SecondViewController.xib in Resources */,
+				9F28D72F1FEFE07D00714C8F /* MapVC.xib in Resources */,
 				9F9DC46C1FE98B560049F28B /* LaunchScreen.storyboard in Resources */,
 				9F28D72A1FEFDF0200714C8F /* TabBarVC.xib in Resources */,
 				9F28D72C1FEFE02100714C8F /* PointsVC.xib in Resources */,
@@ -271,8 +274,9 @@
 				9F28D7171FEC002900714C8F /* NotificationsManager.swift in Sources */,
 				9F9DC4881FE9BE3C0049F28B /* PointsFactory.swift in Sources */,
 				9F9DC4861FE9BC770049F28B /* Point.swift in Sources */,
-				9F9DC4641FE98B560049F28B /* SecondViewController.swift in Sources */,
+				9F9DC4641FE98B560049F28B /* MapVC.swift in Sources */,
 				9F9DC4601FE98B560049F28B /* AppDelegate.swift in Sources */,
+				9F29B95120270A5400A2DCFB /* Annotation.swift in Sources */,
 				9F9DC4621FE98B560049F28B /* PointsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

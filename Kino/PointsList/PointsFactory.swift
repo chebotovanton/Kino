@@ -6,19 +6,14 @@ class PointsFactory: NSObject {
     private static let kDonePointsKey = "donePointsKey"
 
     class func allPoints() -> [Point] {
-        return [Point(coordinate: CLLocationCoordinate2DMake(51.4770994, -0.2874054),
+        return [pointZuryupa(),
+                Point(coordinate: CLLocationCoordinate2DMake(51.4770994, -0.2874054),
                       identifier: "1",
                       name: "Kew Gardens",
                       radius: 300,
                       question: "Name the capital of Great Britain",
                       answerOptions: ["Moscow", "London", "Budapest", "Omsk"],
                       answerIndex: 1),
-                Point(coordinate: CLLocationCoordinate2DMake(51.4948765, -0.2282221),
-                      identifier: "2",
-                      name: "Shazam London",
-                      radius: 300,
-                      question: "Who's the Kino band frontman",
-                      answerOptions: ["Johnny Depp", "Viktor Tsoi", "Boris 'the Blade' Grebenshikov", "Anita Tsoi", "Korolenko Psoi"], answerIndex: 1),
                 Point(coordinate: CLLocationCoordinate2DMake(59.9352842, 30.3584432),
                       identifier: "3",
                       name: "Anton's home",
@@ -30,12 +25,6 @@ class PointsFactory: NSObject {
                       identifier: "4",
                       name: "Anton's office",
                       radius: 300,
-                      question: "Who's the Kino band frontman",
-                      answerOptions: ["Johnny Depp", "Viktor Tsoi", "Boris 'the Blade' Grebenshikov", "Anita Tsoi", "Korolenko Psoi"], answerIndex: 1),
-                Point(coordinate: CLLocationCoordinate2DMake(59.877137, 30.3566413),
-                      identifier: "5",
-                      name: "Rio",
-                      radius: 1000,
                       question: "Who's the Kino band frontman",
                       answerOptions: ["Johnny Depp", "Viktor Tsoi", "Boris 'the Blade' Grebenshikov", "Anita Tsoi", "Korolenko Psoi"], answerIndex: 1),
                 Point(coordinate: CLLocationCoordinate2DMake(51.469675, -0.286418),
@@ -66,5 +55,16 @@ class PointsFactory: NSObject {
     class func isPointDone( point: Point) -> Bool {
         let donePointsIds: [String] = UserDefaults.standard.array(forKey: kDonePointsKey) as? [String] ?? []
         return donePointsIds.contains(where: { $0 == point.identifier })
+    }
+
+    private class func pointZuryupa() -> Point {
+        return Point(coordinate: CLLocationCoordinate2DMake(59.9094732, 30.2919868),
+              identifier: "ZRP",
+              name: "Дом культуры им. Цюрупы",
+              radius: 300,
+              question: "Name the capital of Great Britain",
+              answerOptions: ["Moscow", "London", "Budapest", "Omsk"],
+              answerIndex: 1,
+              photoUrl: "http://kanoner.com/pics/2014/12/naberezhnaja-obvodnoho-kanala-181-dk-cjurupy.jpg")
     }
 }
