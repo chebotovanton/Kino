@@ -10,7 +10,7 @@ class MapVC: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
 
         title = "Map"
-        mapView?.register(MKAnnotationView.self, forAnnotationViewWithReuseIdentifier: kAnnotationIdentifier)
+        mapView?.register(AnnotationView.self, forAnnotationViewWithReuseIdentifier: kAnnotationIdentifier)
         let annotations = createAnnotations()
         mapView?.addAnnotations(annotations)
         setInitialRegion(annotations)
@@ -43,9 +43,11 @@ class MapVC: UIViewController, MKMapViewDelegate {
     // MARK: -  MKMapViewDelegate
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annView = mapView.dequeueReusableAnnotationView(withIdentifier: kAnnotationIdentifier, for: annotation)
-        annView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        annView.backgroundColor = UIColor.red
+        // WARNING: annotation view reuse?
+        let annView = AnnotationView(annotation: annotation, reuseIdentifier: kAnnotationIdentifier)
+        annView.frame = CGRect(x: 0, y: 0, width: 120, height: 120)
+        annView.backgroundColor = UIColor.black
+        annView.layer.cornerRadius = 12
 
         return annView
     }

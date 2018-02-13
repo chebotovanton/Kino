@@ -21,7 +21,6 @@ class PointCell: UITableViewCell {
         if let urlString = point.photoUrl {
             let url = URL(string: urlString)
             pointImageView.sd_setImage(with: url, completed: nil)
-
         }
     }
 

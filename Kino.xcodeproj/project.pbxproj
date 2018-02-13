@@ -27,6 +27,7 @@
 		9F9DC4861FE9BC770049F28B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DC4851FE9BC770049F28B /* Point.swift */; };
 		9F9DC4881FE9BE3C0049F28B /* PointsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DC4871FE9BE3C0049F28B /* PointsFactory.swift */; };
 		9FC3A9CC203351180076C35C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3A9CB203351180076C35C /* Images.xcassets */; };
+		9FC3A9CE203360540076C35C /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3A9CD203360540076C35C /* AnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		9F9DC4851FE9BC770049F28B /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		9F9DC4871FE9BE3C0049F28B /* PointsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsFactory.swift; sourceTree = "<group>"; };
 		9FC3A9CB203351180076C35C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9FC3A9CD203360540076C35C /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		AA6F59AA1B6F413501F0790E /* Pods-Kino.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kino.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kino/Pods-Kino.debug.xcconfig"; sourceTree = "<group>"; };
 		C0202C826A996D2957809D2C /* Pods_Kino.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kino.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 				9F9DC4631FE98B560049F28B /* MapVC.swift */,
 				9F28D72E1FEFE07D00714C8F /* MapVC.xib */,
 				9F29B95020270A5400A2DCFB /* Annotation.swift */,
+				9FC3A9CD203360540076C35C /* AnnotationView.swift */,
 			);
 			path = MapVC;
 			sourceTree = "<group>";
@@ -334,10 +337,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Kino/Pods-Kino-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F28D7191FEC01B000714C8F /* QuizManager.swift in Sources */,
+				9FC3A9CE203360540076C35C /* AnnotationView.swift in Sources */,
 				9F28D7241FEFD91200714C8F /* PointCell.swift in Sources */,
 				9F28D7291FEFDF0200714C8F /* TabBarVC.swift in Sources */,
 				9F9DC4821FE98B950049F28B /* LocationManager.swift in Sources */,
