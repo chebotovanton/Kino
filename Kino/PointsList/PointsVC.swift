@@ -16,6 +16,7 @@ class PointsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         NotificationsManager.shared.authorize()
 
+        tableView.separatorStyle = .none
         tableView.register(UINib(nibName: kCellIdentifier, bundle: nil), forCellReuseIdentifier: kCellIdentifier)
     }
 
@@ -34,6 +35,10 @@ class PointsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return points.count
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
