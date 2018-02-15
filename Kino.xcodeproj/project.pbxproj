@@ -28,6 +28,8 @@
 		9F9DC4881FE9BE3C0049F28B /* PointsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DC4871FE9BE3C0049F28B /* PointsFactory.swift */; };
 		9FC3A9CC203351180076C35C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3A9CB203351180076C35C /* Images.xcassets */; };
 		9FC3A9CE203360540076C35C /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3A9CD203360540076C35C /* AnnotationView.swift */; };
+		9FC3A9DB2034AFD40076C35C /* PointDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3A9D92034AFD40076C35C /* PointDetailsVC.swift */; };
+		9FC3A9DC2034AFD40076C35C /* PointDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3A9DA2034AFD40076C35C /* PointDetailsVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		9F9DC4871FE9BE3C0049F28B /* PointsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsFactory.swift; sourceTree = "<group>"; };
 		9FC3A9CB203351180076C35C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9FC3A9CD203360540076C35C /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
+		9FC3A9D92034AFD40076C35C /* PointDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointDetailsVC.swift; sourceTree = "<group>"; };
+		9FC3A9DA2034AFD40076C35C /* PointDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointDetailsVC.xib; sourceTree = "<group>"; };
 		AA6F59AA1B6F413501F0790E /* Pods-Kino.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kino.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kino/Pods-Kino.debug.xcconfig"; sourceTree = "<group>"; };
 		C0202C826A996D2957809D2C /* Pods_Kino.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kino.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -147,8 +151,9 @@
 			children = (
 				9F28D72D1FEFE06B00714C8F /* MapVC */,
 				9F28D7261FEFDE7B00714C8F /* TabBar */,
-				9F28D7211FEFD80900714C8F /* PointsList */,
 				9F9DC45F1FE98B560049F28B /* AppDelegate.swift */,
+				9FC3A9D82034AFB50076C35C /* PointDetails */,
+				9F28D7211FEFD80900714C8F /* PointsList */,
 				9F9DC4681FE98B560049F28B /* Assets.xcassets */,
 				9F9DC46A1FE98B560049F28B /* LaunchScreen.storyboard */,
 				9F9DC46D1FE98B560049F28B /* Info.plist */,
@@ -175,6 +180,15 @@
 				C0202C826A996D2957809D2C /* Pods_Kino.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9FC3A9D82034AFB50076C35C /* PointDetails */ = {
+			isa = PBXGroup;
+			children = (
+				9FC3A9D92034AFD40076C35C /* PointDetailsVC.swift */,
+				9FC3A9DA2034AFD40076C35C /* PointDetailsVC.xib */,
+			);
+			path = PointDetails;
 			sourceTree = "<group>";
 		};
 		E06CB3890094CCCD83310AEC /* Pods */ = {
@@ -281,6 +295,7 @@
 				9F28D72F1FEFE07D00714C8F /* MapVC.xib in Resources */,
 				9FC3A9CC203351180076C35C /* Images.xcassets in Resources */,
 				9F9DC46C1FE98B560049F28B /* LaunchScreen.storyboard in Resources */,
+				9FC3A9DC2034AFD40076C35C /* PointDetailsVC.xib in Resources */,
 				9F28D72A1FEFDF0200714C8F /* TabBarVC.xib in Resources */,
 				9F28D72C1FEFE02100714C8F /* PointsVC.xib in Resources */,
 				9F9DC4691FE98B560049F28B /* Assets.xcassets in Resources */,
@@ -337,11 +352,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Kino/Pods-Kino-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BSStackView/BSStackView.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSStackView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
@@ -358,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F28D7191FEC01B000714C8F /* QuizManager.swift in Sources */,
+				9FC3A9DB2034AFD40076C35C /* PointDetailsVC.swift in Sources */,
 				9FC3A9CE203360540076C35C /* AnnotationView.swift in Sources */,
 				9F28D7241FEFD91200714C8F /* PointCell.swift in Sources */,
 				9F28D7291FEFDF0200714C8F /* TabBarVC.swift in Sources */,
