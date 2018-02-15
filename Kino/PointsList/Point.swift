@@ -9,7 +9,7 @@ class Point: NSObject {
     let question: String
     let answerOptions: [String]
     let answerIndex: Int
-    let photoUrl: String?
+    let photoUrls: [String]
 
     init(coordinate: CLLocationCoordinate2D,
          identifier: String,
@@ -18,7 +18,7 @@ class Point: NSObject {
          question: String,
          answerOptions: [String],
          answerIndex: Int,
-         photoUrl: String? = nil) {
+         photoUrls: [String]) {
         self.identifier = identifier
         self.coordinate = coordinate
         self.name = name
@@ -26,6 +26,6 @@ class Point: NSObject {
         self.question = question
         self.answerOptions = answerOptions
         self.answerIndex = answerIndex
-        self.photoUrl = photoUrl
+        self.photoUrls = photoUrls
     }
 }

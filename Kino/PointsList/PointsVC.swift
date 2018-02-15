@@ -51,5 +51,14 @@ class PointsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell!
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let pointCell = tableView.cellForRow(at: indexPath) as? PointCell {
+            let point = pointCell.point
+            let detailsVC = PointDetailsVC()
+            detailsVC.point = point
+            navigationController?.pushViewController(detailsVC, animated: true)
+        }
+    }
+
 }
 

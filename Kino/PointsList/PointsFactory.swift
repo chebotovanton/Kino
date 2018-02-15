@@ -13,26 +13,30 @@ class PointsFactory: NSObject {
                       radius: 300,
                       question: "Name the capital of Great Britain",
                       answerOptions: ["Moscow", "London", "Budapest", "Omsk"],
-                      answerIndex: 1),
+                      answerIndex: 1,
+                      photoUrls: []),
                 Point(coordinate: CLLocationCoordinate2DMake(59.9352842, 30.3584432),
                       identifier: "3",
                       name: "Anton's home",
                       radius: 300,
                       question: "Name the capital of Great Britain",
                       answerOptions: ["Moscow", "London", "Budapest", "Omsk"],
-                      answerIndex: 1),
+                      answerIndex: 1,
+                      photoUrls: []),
                 Point(coordinate: CLLocationCoordinate2DMake(59.986609, 30.2019042),
                       identifier: "4",
                       name: "Anton's office",
                       radius: 300,
                       question: "Who's the Kino band frontman",
-                      answerOptions: ["Johnny Depp", "Viktor Tsoi", "Boris 'the Blade' Grebenshikov", "Anita Tsoi", "Korolenko Psoi"], answerIndex: 1),
+                      answerOptions: ["Johnny Depp", "Viktor Tsoi", "Boris 'the Blade' Grebenshikov", "Anita Tsoi", "Korolenko Psoi"], answerIndex: 1,
+                      photoUrls: []),
                 Point(coordinate: CLLocationCoordinate2DMake(51.469675, -0.286418),
                       identifier: "5",
                       name: "12 Chilton Rd",
                       radius: 300,
                       question: "Who's the Kino band frontman",
-                      answerOptions: ["Johnny Depp", "Viktor Tsoi", "Boris 'the Blade' Grebenshikov", "Anita Tsoi", "Korolenko Psoi"], answerIndex: 1)
+                      answerOptions: ["Johnny Depp", "Viktor Tsoi", "Boris 'the Blade' Grebenshikov", "Anita Tsoi", "Korolenko Psoi"], answerIndex: 1,
+                      photoUrls: [])
         ]
     }
 
@@ -58,6 +62,9 @@ class PointsFactory: NSObject {
     }
 
     private class func pointZuryupa() -> Point {
+        let photoUrls = ["http://kanoner.com/pics/2014/12/naberezhnaja-obvodnoho-kanala-181-dk-cjurupy.jpg",
+                         "https://www.newsdale.ru/images/stories/other/549721212.jpg",
+                         "https://www.newsdale.ru/images/stories/other/549721213.jpg" ]
         return Point(coordinate: CLLocationCoordinate2DMake(59.9094732, 30.2919868),
               identifier: "ZRP",
               name: "Дом культуры им. Цюрупы",
@@ -65,6 +72,6 @@ class PointsFactory: NSObject {
               question: "Name the capital of Great Britain",
               answerOptions: ["Moscow", "London", "Budapest", "Omsk"],
               answerIndex: 1,
-              photoUrl: "http://kanoner.com/pics/2014/12/naberezhnaja-obvodnoho-kanala-181-dk-cjurupy.jpg")
+              photoUrls: photoUrls)
     }
 }

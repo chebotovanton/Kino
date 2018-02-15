@@ -9,7 +9,7 @@ class TabBarVC: UITabBarController {
 
         let pointsVC = PointsVC(nibName: "PointsVC", bundle: nil)
         let secondVC = MapVC(nibName: "MapVC", bundle: nil)
-        viewControllers = [pointsVC, secondVC]
+        viewControllers = [UINavigationController(rootViewController: pointsVC), secondVC]
     }
 
 }

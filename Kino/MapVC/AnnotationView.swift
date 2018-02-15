@@ -14,7 +14,7 @@ class AnnotationView: MKAnnotationView {
         imageView.layer.cornerRadius = 8
         imageView.clipsToBounds = true
 
-        if let pointAnnotation = annotation as? Annotation, let urlString = pointAnnotation.point.photoUrl {
+        if let pointAnnotation = annotation as? Annotation, let urlString = pointAnnotation.point.photoUrls.first {
             let url = URL(string: urlString)
             imageView.sd_setImage(with: url, completed: nil)
         }

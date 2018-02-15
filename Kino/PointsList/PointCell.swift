@@ -7,6 +7,8 @@ class PointCell: UITableViewCell {
     @IBOutlet private weak var statusView: UIView!
     @IBOutlet private weak var pointImageView: UIImageView!
 
+    var point: Point!
+
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -15,10 +17,11 @@ class PointCell: UITableViewCell {
     }
 
     func setup(_ point: Point) {
+        self.point = point
         nameLabel.text = point.name
         statusView.backgroundColor = PointsFactory.isPointDone(point: point) ? UIColor.green : UIColor.red
 
-        if let urlString = point.photoUrl {
+        if let urlString = point.photoUrls.first {
             let url = URL(string: urlString)
             pointImageView.sd_setImage(with: url, completed: nil)
         } else {
